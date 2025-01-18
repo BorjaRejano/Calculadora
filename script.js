@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 resultado = resultado.slice(0, -1);
             } else if (valor === '=') {
                 try {
-                    resultado = eval(resultado);
+                    resultado = eval(resultado.replace('x', '*'));
                 } catch (e) {
                     resultado = 'Error';
                 }
